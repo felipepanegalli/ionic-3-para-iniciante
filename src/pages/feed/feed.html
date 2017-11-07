@@ -12,7 +12,6 @@
 
 </ion-header>
 
-
 <ion-content padding>
   <h5>Usuário logado: {{ nomeUsuario }}</h5> 
 
@@ -23,32 +22,32 @@
         <!-- colocar na src que builda para assets/imgs/imagem.jpg-->
         <img src="https://s3-sa-east-1.amazonaws.com/99freelas/profile/210x210/felipe.panegalli.jpg">
       </ion-avatar>
-      <h2 class="feed_title">{{ nomeUsuario }}</h2>
-      <p>Novembro 1, 2017</p>
+      <h2 class="feed_title">{{ objeto_feed.nome }}</h2>
+      <p>{{ objeto_feed.data }}</p>
     </ion-item>
 
     <img src="http://www.upsocialnetwork.com/wp-content/uploads/2017/01/UP-Social-Guinness-Flyer.png">
 
     <ion-card-content>
-      <p>Salve salve galera, saiu novidade no site... Como obter retorno com redes sociais. Clique na imagem acima e veja, te espero lá :).</p>
+      <p>{{ objeto_feed.descricao }}</p>
     </ion-card-content>
 
     <ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="thumbs-up"></ion-icon>
-          <div>12 Curtidas</div>
+          <div>{{ objeto_feed.qtd_likes }} Curtidas</div>
         </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="text"></ion-icon>
-          <div>4 Comentários</div>
+          <div>{{ objeto_feed.qtd_comentario }} Comentários</div>
         </button>
       </ion-col>
       <ion-col center text-center>
         <ion-note>
-          11h atrás
+          {{ objeto_feed.tempo_comentario }} atrás
         </ion-note>
       </ion-col>
     </ion-row>
