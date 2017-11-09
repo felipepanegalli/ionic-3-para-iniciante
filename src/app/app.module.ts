@@ -18,6 +18,8 @@ import { ListarCartasPageModule } from './../pages/listar-cartas/listar-cartas.m
 import { SobrePageModule } from './../pages/sobre/sobre.module';
 import { PerfilPageModule } from './../pages/perfil/perfil.module';
 import { ConfiguracoesPageModule } from './../pages/configuracoes/configuracoes.module';
+import { FeedDetalhesPageModule } from './../pages/feed-detalhes/feed-detalhes.module';
+import { CardDetalhesPageModule } from './../pages/card-detalhes/card-detalhes.module';
 
 //Plugins
 import { StatusBar } from '@ionic-native/status-bar';
@@ -39,7 +41,9 @@ import { MovieProvider } from '../providers/movie/movie';
     ListarCartasPageModule,
     ConfiguracoesPageModule,
     PerfilPageModule,
-    SobrePageModule
+    SobrePageModule,
+    FeedDetalhesPageModule,
+    CardDetalhesPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -1,0 +1,23 @@
+<ion-header>
+  
+  <ion-navbar>
+    <ion-title>cardDetalhes</ion-title>
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngIf="carta" >
+    <img src="{{ carta.imageUrl }}"/>
+    <ion-card-content>
+      <ion-card-title>
+        #{{ carta.number }} - {{ carta.name }}
+      </ion-card-title>
+      <p>Descrição: {{ carta.text }}</p>
+      <p><b>Mana:</b> {{ carta.manaCost }}</p>
+      <p><b>Raridade:</b> {{ carta.rarity }}</p>
+      <p><b>Poder:</b> ATK:{{ carta.power }}/DEF:{{ carta.toughness }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

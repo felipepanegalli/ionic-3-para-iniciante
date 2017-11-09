@@ -1,0 +1,32 @@
+<ion-header>
+  
+  <ion-navbar>
+    <ion-title>feedDetalhes</ion-title>
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngIf="filme" >
+    
+    <ion-item>
+      <ion-avatar item-start>
+        <!-- colocar na src que builda para assets/imgs/imagem.jpg-->
+        <img src="https://s3-sa-east-1.amazonaws.com/99freelas/profile/210x210/felipe.panegalli.jpg">
+      </ion-avatar>
+      <h2 class="feed_title">{{ filme.original_title }}</h2>
+      <p>{{ filme.release_date }}</p>
+    </ion-item>
+    
+    <img [src]="'https://image.tmdb.org/t/p/w500' + filme.backdrop_path">
+    
+    <ion-card-content>
+      <p>{{ filme.overview }}</p>
+      <br>
+      <p>Gênero(s): <b *ngFor="let genero of filme.genres">{{ genero.name }}, </b></p>
+      <p>Áudio(s): <b *ngFor="let audio of filme.spoken_languages">{{ audio.name }}, </b></p>
+    </ion-card-content>
+    
+  </ion-card>
+</ion-content>

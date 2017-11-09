@@ -14,6 +14,11 @@
 
 
 <ion-content padding>
+  
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
   <ion-card *ngFor="let carta of listaDeCartas">
     <img src="{{ carta.imageUrl }}"/>
     <ion-card-content>
@@ -27,5 +32,11 @@
         Texto Original: {{ carta.originalText }}
       </p>
     </ion-card-content>
+    <button ion-button block (click)="abrirDetalhes(carta)">+ Detalhes</button>
   </ion-card>
+  
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
 </ion-content>
